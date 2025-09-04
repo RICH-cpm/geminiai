@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gemini Chat</title>
+<link rel="stylesheet" href="styles.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="sidebar">
+    <header>💬 Чаты</header>
+    <div id="chatList"></div>
+    <div class="sidebar-actions">
+      <button onclick="newChat()">➕</button>
+      <button onclick="clearChats()">🗑️</button>
+    </div>
+  </div>
+  <div id="main">
+    <header>Gemini Chat</header>
+    <div id="chat"></div>
+    <div id="inputBox">
+      <input type="file" id="fileInput" hidden onchange="handleFile(event)">
+      <button id="fileBtn" onclick="document.getElementById('fileInput').click()">📎</button>
+      <input type="text" id="message" placeholder="Напиши сообщение..." onkeydown="checkEnter(event)" />
+      <button id="sendBtn" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
